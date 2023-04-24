@@ -1,13 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from "react";
+import Navigation from "./components/navigation";
+
 
 function App() {
-  return (
+    const [actualPage, setActualPage] = useState("About");
+
+    return (
     <div className="App">
+      <Navigation
+          setPage={setActualPage}/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Elton <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
