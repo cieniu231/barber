@@ -1,30 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from "react";
-import Navigation from "./components/navigation";
+import React from "react";
+import Navbar  from "./components/navigation";
+import Home from "./components/home"
+import About from "./components/about";
+import Reservation from "./components/reservation";
+import { Route, Routes } from "react-router-dom";
+
 
 
 function App() {
-    const [actualPage, setActualPage] = useState("About");
 
-    return (
+  return (
     <div className="App">
-      <Navigation
-          setPage={setActualPage}/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Elton <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+        <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/reservation" element={<Reservation/>} />
+        </Routes>
     </div>
   );
 }
