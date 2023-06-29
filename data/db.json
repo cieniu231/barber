@@ -1,0 +1,16 @@
+{
+  "blogs": [
+    {
+      "title": "My first post",
+      "body": "Pierwszy post treningowy",
+      "author": "mario",
+      "id": 1
+    },
+    {
+      "title": "My second post",
+      "body": "Drugi post treningowy",
+      "author": "yoshi",
+      "id": 2
+    }
+  ]
+}

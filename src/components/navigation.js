@@ -1,18 +1,27 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "../styles.css";
+import {useThemeUpdate} from "./ThemeContext";
 
 export default function Navbar() {
+
+        const toggleTheme = useThemeUpdate()
     return(
-        <nav className="nav">
-            <Link to="/" className="site-title">
+        <>
+            <nav className="nav">
+                <button onClick={toggleTheme}>Toggle Theme</button>
+                <Link to="/" className="site-title">
                 Site Name
             </Link>
             <ul>
                 <CustomLink to="/about">About</CustomLink>
                 <CustomLink to="/reservation">Reservation</CustomLink>
+                <CustomLink to="/prices">Prices</CustomLink>
+                <CustomLink to="/blog">Blog</CustomLink>
             </ul>
-        </nav>
+            </nav>
+        </>
+
     )
 
     function CustomLink({ to, children, ...props}) {
