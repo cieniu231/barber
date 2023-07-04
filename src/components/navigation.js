@@ -5,14 +5,14 @@ import {useThemeUpdate} from "./ThemeContext";
 
 export default function Navbar() {
 
-        const toggleTheme = useThemeUpdate()
+    const toggleTheme = useThemeUpdate()
     return(
         <>
             <nav className="nav">
                 <button onClick={toggleTheme}>Toggle Theme</button>
                 <Link to="/" className="site-title">
-                Site Name
-            </Link>
+                    Site Name
+                </Link>
             <ul>
                 <CustomLink to="/about">About</CustomLink>
                 <CustomLink to="/reservation">Reservation</CustomLink>

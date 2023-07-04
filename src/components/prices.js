@@ -1,5 +1,7 @@
-import React, {useRef, useState} from 'react';
+import React, { useState } from 'react';
 import {useTheme} from "./ThemeContext";
+import  useFetch  from '../useFetch'
+import PriceList from './pricelist'
 
 
 
@@ -14,36 +16,26 @@ export default function Prices() {
         margin: '2rem'
     }
 
-    const [state, setState] = useState({
-        text: "Wpisz rok",
-    });
-
-    const number = useRef("");
-
-    const handleDateChange = (e) => {
-        const value = number.current.value;
-        console.log(value);
-        fetch(`http://numbersapi.com/${value}/year?json`)
-            .then(res => {
-                if(res.ok){
-                    return res
-                }
-                throw Error(res.status)
-            })
-            .then(res => res.json())
-            .then(data => setState(prevState => {
-                return { ...prevState, text: data.text }
-            }))
-            .catch(err => setState(() => {
-                return { text: "Wpisz rok " }
-            }))
-
+    const [currentId, setCurrentId] = useState("1");
+    const {data: prices, isLoading, error} = useFetch("http://localhost:8000/prices/"+currentId);
+    const handleDataChange = (e, _isLoading) => {
+        setCurrentId(e.target.value);
     }
+
+
+
 
     return(
         <>
-            <input onChange={handleDateChange} type="text" ref={number}/>
-            <p>Odpowiedź: {state.text} </p>
+            <select onChange={handleDataChange} value={currentId}>
+                <option value="1">Kamil (Master  Barber)</option>
+                <option value="2">Sebastian (Barber)</option>
+            </select>
+
+            {error && <div>{error}</div>}
+            {isLoading && <div>Loading...</div>}
+            {!isLoading && prices && <PriceList prices={prices} title={"All Blogs!"} />}
+
         </>
     )
 

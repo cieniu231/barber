@@ -8,6 +8,9 @@ import Prices from "./components/prices";
 import Blog from "./components/blog";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from './components/ThemeContext'
+import BlogDetails from "./components/blogdetails";
+import Create from "./components/newblog";
+import NotFound from "./components/NotFound";
 
 function App() {
 
@@ -21,6 +24,10 @@ function App() {
               <Route path="/reservation" element={<Reservation/>} />
               <Route path="/prices" element={<Prices/>} />
               <Route path="/blog" element={<Blog/>} />
+              <Route path="/newblog" element={<Create/>} />
+              <Route path="/blogs/:id" element={<BlogDetails/>} />
+              <Route path="*" element={<NotFound/>} />
+
             </Routes>
           </div>
       </ThemeProvider>

@@ -1,43 +1,20 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import BlogList from "./bloglist";
+import useFetch from "../useFetch";
+import {Link} from "react-router-dom";
 
 export default function Blog() {
 
-    const [blogs, setBlogs] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const {data: blogs, isLoading, error} = useFetch('http://localhost:8000/blogs');
 
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !==id);
-        setBlogs(newBlogs);
-    }
-
-    useEffect(() => {
-        setTimeout(() => {
-            fetch('http://localhost:8000/blogss')
-                .then(res => {
-                    if(!res.ok) {
-                        throw Error('could not fetch the data for that resource');
-                    }
-                    return res.json();
-                })
-                .then((data) => {
-                    setBlogs(data);
-                    setIsLoading(false);
-                    setError(null);
-                })
-                .catch(err => {
-                    setIsLoading(false);
-                    setError(err.message);
-                })
-        },1000);
-        },[]);
 
     return (
         <div>
+            <Link to="/newblog">Create</Link>
+
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
-            {blogs && <BlogList blogs={blogs} title={"All Blogs!"} handleDelete={handleDelete} />}
+            {blogs && <BlogList blogs={blogs} title={"All Blogs!"}  />}
         </div>
     )
 }

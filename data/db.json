@@ -1,16 +1,98 @@
 {
   "blogs": [
     {
-      "title": "My first post",
-      "body": "Pierwszy post treningowy",
+      "title": "s",
+      "body": "s",
       "author": "mario",
-      "id": 1
+      "id": 8
     },
     {
-      "title": "My second post",
-      "body": "Drugi post treningowy",
+      "title": "s",
+      "body": "s",
+      "author": "mario",
+      "id": 9
+    },
+    {
+      "title": "s",
+      "body": "ss",
+      "author": "mario",
+      "id": 10
+    },
+    {
+      "title": "s",
+      "body": "ss",
+      "author": "mario",
+      "id": 11
+    },
+    {
+      "title": "s",
+      "body": "ssssssssssssssssssssssssssssssssssssssssssssssssssssss",
       "author": "yoshi",
-      "id": 2
+      "id": 12
+    },
+    {
+      "title": "s",
+      "body": "ssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "author": "yoshi",
+      "id": 13
+    },
+    {
+      "title": "s",
+      "body": "ssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "author": "yoshi",
+      "id": 14
+    },
+    {
+      "title": "s",
+      "body": "ssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "author": "yoshi",
+      "id": 15
+    },
+    {
+      "title": "s",
+      "body": "ssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "author": "yoshi",
+      "id": 16
+    },
+    {
+      "title": "r",
+      "body": "r",
+      "author": "mario",
+      "id": 17
+    },
+    {
+      "title": "f",
+      "body": "f",
+      "author": "mario",
+      "id": 21
+    },
+    {
+      "title": "e",
+      "body": "e",
+      "author": "mario",
+      "id": 22
+    },
+    {
+      "title": "e",
+      "body": "e",
+      "author": "mario",
+      "id": 23
+    }
+  ],
+  "prices": [
+    {
+      "id": 1,
+      "name": "Kamil",
+      "combo": 120,
+      "broda": 60,
+      "hair-cut": 60
+    },
+    {
+      "id": 2,
+      "name": "Sebastian",
+      "combo": 100,
+      "broda": 50,
+      "hair-cut": 50
     }
   ]
 }
