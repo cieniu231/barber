@@ -1,11 +1,7 @@
 import {useTheme} from "./ThemeContext";
 
 const PriceList = ({prices, title}) => {
-    const darkTheme=useTheme();
-    const themeStyles = {
-        backgroundColor: darkTheme ? '#333' : '#CCC',
-        color: darkTheme ? '#CCC' : '#333',
-    }
+
     return (
         <div className="blog-list">
             <h2> {prices.name} </h2>

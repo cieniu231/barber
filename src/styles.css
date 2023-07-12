@@ -162,6 +162,14 @@ input:invalid[focused="true"] ~ span {
     cursor: pointer;
 }
 
+.footer {
+    width: 100%;
+    position: absolute;
+}
+.footer > p {
+    height: 100%;
+    padding: 14px;
+}
 /* responsive table styles */
 
 .table-rwd{
@@ -255,7 +263,7 @@ input:invalid[focused="true"] ~ span {
 /* blog*/
 .blog-preview {
     padding: 10px 16px;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     border-bottom: 1px solid #fafafa;
     background-color: #61dafb36;
     width: 400px;

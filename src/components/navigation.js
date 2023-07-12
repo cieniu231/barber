@@ -17,7 +17,7 @@ export default function Navbar() {
         <>
             <nav className="nav" style={themeStyles}>
                 <button onClick={toggleTheme}>Toggle Theme</button>
-                <Link to="/" className="site-title">
+                <Link to="/about" className="site-title">
                     Site Name
                 </Link>
             <ul>

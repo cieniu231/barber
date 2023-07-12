@@ -11,6 +11,7 @@ import {ThemeProvider, useTheme} from './components/ThemeContext'
 import BlogDetails from "./components/blogdetails";
 import Create from "./components/newblog";
 import NotFound from "./components/NotFound";
+import Footer from "./components/footer";
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
           <div className="App" >
             <Navbar/>
             <Routes>
-              <Route path="/" element={<Home/>} />
+              <Route path="/about" element={<About/>} />
               <Route path="/about" element={<About/>} />
               <Route path="/reservation" element={<Reservation/>} />
               <Route path="/prices" element={<Prices/>} />
@@ -29,8 +30,8 @@ function App() {
               <Route path="/newblog" element={<Create/>} />
               <Route path="/blogs/:id" element={<BlogDetails/>} />
               <Route path="*" element={<NotFound/>} />
-
             </Routes>
+            <Footer/>
           </div>
       </ThemeProvider>
 

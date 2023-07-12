@@ -13,7 +13,8 @@ export default function Prices() {
         backgroundColor: darkTheme ? '#333' : '#CCC',
         color: darkTheme ? '#CCC' : '#333',
         padding: '2rem',
-        margin: '2rem'
+        margin: '2rem',
+        minHeight: '77vh'
     }
 
     const [currentId, setCurrentId] = useState("1");
