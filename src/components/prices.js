@@ -26,7 +26,7 @@ export default function Prices() {
 
 
     return(
-        <>
+        <div style={themeStyles}>
             <select onChange={handleDataChange} value={currentId}>
                 <option value="1">Kamil (Master  Barber)</option>
                 <option value="2">Sebastian (Barber)</option>
@@ -36,7 +36,7 @@ export default function Prices() {
             {isLoading && <div>Loading...</div>}
             {!isLoading && prices && <PriceList prices={prices} title={"All Blogs!"} />}
 
-        </>
+        </div>
     )
 
 }

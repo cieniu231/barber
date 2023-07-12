@@ -7,16 +7,18 @@ import Reservation from "./components/reservation";
 import Prices from "./components/prices";
 import Blog from "./components/blog";
 import { Route, Routes } from "react-router-dom";
-import { ThemeProvider } from './components/ThemeContext'
+import {ThemeProvider, useTheme} from './components/ThemeContext'
 import BlogDetails from "./components/blogdetails";
 import Create from "./components/newblog";
 import NotFound from "./components/NotFound";
 
 function App() {
 
+
+
   return (
       <ThemeProvider>
-          <div className="App">
+          <div className="App" >
             <Navbar/>
             <Routes>
               <Route path="/" element={<Home/>} />

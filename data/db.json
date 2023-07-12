@@ -2,18 +2,6 @@
   "blogs": [
     {
       "title": "s",
-      "body": "s",
-      "author": "mario",
-      "id": 8
-    },
-    {
-      "title": "s",
-      "body": "s",
-      "author": "mario",
-      "id": 9
-    },
-    {
-      "title": "s",
       "body": "ss",
       "author": "mario",
       "id": 10
@@ -77,6 +65,12 @@
       "body": "e",
       "author": "mario",
       "id": 23
+    },
+    {
+      "title": "Hello world",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed feugiat quam. Etiam tristique, erat molestie ultricies tincidunt, metus ligula imperdiet eros, ut vestibulum tellus sem et dui. In hac habitasse platea dictumst. Mauris id magna sed magna porttitor semper nec in erat. Nulla id efficitur lacus. Quisque ultrices augue elementum, blandit nisi ac, tempor massa. Ut aliquam turpis turpis, nec congue magna faucibus vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ac hendrerit urna. Aliquam quis ultrices lacus.",
+      "author": "mario",
+      "id": 24
     }
   ],
   "prices": [
@@ -84,15 +78,15 @@
       "id": 1,
       "name": "Kamil",
       "combo": 120,
-      "broda": 60,
-      "hair-cut": 60
+      "beard": 60,
+      "haircut": 60
     },
     {
       "id": 2,
       "name": "Sebastian",
       "combo": 100,
-      "broda": 50,
-      "hair-cut": 50
+      "beard": 50,
+      "haircut": 50
     }
   ]
 }

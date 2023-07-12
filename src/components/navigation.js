@@ -1,14 +1,21 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "../styles.css";
-import {useThemeUpdate} from "./ThemeContext";
+import {useTheme, useThemeUpdate} from "./ThemeContext";
 
 export default function Navbar() {
 
+    const darkTheme = useTheme()
+
+    const themeStyles = {
+        backgroundColor: darkTheme ? '#333' : '#CCC',
+        color: darkTheme ? '#CCC' : '#333',
+    }
     const toggleTheme = useThemeUpdate()
+
     return(
         <>
-            <nav className="nav">
+            <nav className="nav" style={themeStyles}>
                 <button onClick={toggleTheme}>Toggle Theme</button>
                 <Link to="/" className="site-title">
                     Site Name

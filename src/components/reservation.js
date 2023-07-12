@@ -72,6 +72,7 @@ export default function Reservation() {
     console.log(values);
     return (
         <div style={themeStyles}>
+            <div className="form-container">
             <h1>Make an appointment</h1>
             <form onSubmit={handleSubmit} >
                 {inputs.map((input)=>(
@@ -85,7 +86,7 @@ export default function Reservation() {
 
                 <button className="form-button">Submit</button>
             </form>
-            <hr />
+            </div>
         </div>
             )
 }
